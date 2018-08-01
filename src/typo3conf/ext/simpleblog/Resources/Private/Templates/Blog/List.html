@@ -1,0 +1,29 @@
+<f:layout name="Default">
+  <f:section name="content">
+
+    <!--<div class="container">-->
+      <h1>Blog List</h1>
+
+      <ul class="list-group">
+        <f:for each="{blogs}" as="blog">
+          <li class="list-group-item">
+            {blog.title}
+            <f:link.action action="updateForm" arguments="{blog:blog}" class="btn btn-primary btn-xs pull-right">EDIT <span class="glyphicon glyphicon-edit"></span></f:link.action>
+            <f:link.action action="deleteConfirm" arguments="{blog:blog}" class="btn btn-primary btn-xs pull-right margin-right">DELETE <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></f:link.action>
+            <f:link.action action="show" arguments="{blog:blog}" class="btn btn-primary btn-xs pull-right margin-right">SHOW <span class="glyphicon glyphicon-search"></span></f:link.action>
+          </li>
+
+        </f:for>
+      </ul>
+
+      <f:link.action action="addForm" class="btn btn-primary">Add Blogs</f:link.action>
+
+    <!--</div>-->
+
+  </f:section>
+</f:layout>
+
+
+
+
+

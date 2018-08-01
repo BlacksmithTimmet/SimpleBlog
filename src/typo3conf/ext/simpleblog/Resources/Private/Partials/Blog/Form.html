@@ -1,0 +1,15 @@
+<h1>{headline}</h1>
+
+<f:form action="{action}" object="{blog}" name="blog" additionalAttributes="{role:'form'}">
+
+  <div class="form-group">
+    <label>Blog Titel</label>
+    <f:form.textfield property="title" class="form-control"></f:form.textfield>
+  </div>
+  <div class="form-group">
+    <label>Blog descriptionBeschreibung</label>
+    <f:form.textarea property="description" class="form-control"></f:form.textarea>
+  </div>
+
+  <f:form.submit value="{submitmessage}" class="btn btn-primary"></f:form.submit>
+</f:form>

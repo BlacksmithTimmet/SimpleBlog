@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-07-24T15:52:18Z" product-name="simpleblog">
+		<header/>
+		<body>
+			<trans-unit id="tx_simpleblog_domain_model_bloglisting">
+				<source>Simpleblog - Bloglisting</source>
+			</trans-unit>
+			<trans-unit id="tx_simpleblog_domain_model_bloglisting.description">
+				<source>Beispiel einer Typo3 Extension</source>
+			</trans-unit>
+			<trans-unit id="comment.description">
+				<source>comment</source>
+			</trans-unit>
+			<trans-unit id="commentdate.description">
+				<source>commentdate</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
