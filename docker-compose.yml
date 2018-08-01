@@ -1,0 +1,33 @@
+version: "3"
+services:
+  typo3:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./src/fileadmin:/var/www/html/fileadmin
+      - ./src/typo3conf:/var/www/html/typo3conf
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      DB_HOST: mysql.infra.local
+      DB_NAME: extbase
+    links:
+      - database:mysql.infra.local
+  database:
+    image: mysql:5.6
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    command:
+      - --character-set-server=utf8
+      - --collation-server=utf8_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: extbase
+      MYSQL_USER: extbase
