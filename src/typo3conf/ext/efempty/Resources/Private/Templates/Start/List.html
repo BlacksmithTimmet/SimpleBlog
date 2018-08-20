@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+  <f:layout name="defaultLayout"/>
+
+  <f:section name="content">
+    <ul>
+      <f:for each="{Brand}" as="brand">
+        <f:if condition="{0: '{brand.publishedIn}'}=={0:'Germany'}">
+          <f:then>
+            <li>ID: {brand.id}</li>
+            <li>Published in: {brand.publishedIn}</li>
+            <li>Publisher: {brand.publisher}</li>
+            <li>Marketed In</li>
+            <ul>
+              <f:for each="{brand.marketedIn}" as="marketedIn">
+                <li>{marketedIn}</li>
+              </f:for>
+            </ul>
+
+            <li>{brand.name}</li>
+            <li>Object ID's</li>
+            <ul>
+              <f:for each="{brand.objectIds}" as="objectIds">
+                <li>
+                  <f:link.action action="show" arguments="{objectIds:objectIds}">
+                    {objectIds}
+                  </f:link.action>
+                </li>
+
+              </f:for>
+
+            </ul>
+
+          </f:then>
+        </f:if>
+      </f:for>
+    </ul>
+  </f:section>
+</html>
