@@ -2,19 +2,21 @@
   <f:layout name="defaultLayout"/>
 
   <f:section name="content">
+    <div>
 
-    <ul>
-      <li>{Detail.brandName }</li>
-      <li>{Detail.id }</li>
-      <li>{Detail.speakingId}</li>
-      <li>{Detail.type}</li>
-      <li>{Detail.publishedIn }</li>
-      <li>{Detail.publisher }</li>
-      <li>{Detail.profile }</li>
+    <ul class="list-group">
+      <li class="list-group-item">Brand Name: {Detail.brandName }</li>
+      <li class="list-group-item">ID: {Detail.id }</li>
+      <li class="list-group-item">SpeakingID: {Detail.speakingId}</li>
+      <li class="list-group-item">Type: {Detail.type}</li>
+      <li class="list-group-item">Published in: {Detail.publishedIn}</li>
+      <li class="list-group-item">Publisher: {Detail.publisher}</li>
+      <f:format.html>{Detail.profile }</f:format.html>
     </ul>
 
     <img src="{Detail.logo}">
 
+    </div>
     <f:link.action action="list">Back</f:link.action>
 
   </f:section>
