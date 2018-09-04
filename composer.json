@@ -3,7 +3,7 @@
 "description":"composer exercise",
 "autoload":{
   "psr-4":{
-    "BlacksmithTimmet\\SimpleBlog":"src/typo3conf/ext/simpleblog/Classes"
+    "BlacksmithTimmet\\SimpleBlog\\":"src/typo3conf/ext/simpleblog/Classes"
   }
 }
 }
